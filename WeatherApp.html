@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="WeatherAppStyle.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="button-container">
+            <div class="circle-button">27°</div>
+            C
+        </div> -->
+        <img src="rain.png" height="144px" width="144px" class="rain main"/>
+        <div class="c-button"><p>27°</p></div>
+        <img src="setting.png" class="settings" height="24px"/>
+        <div class="weather-info">
+            <div class="condensed-info">
+                <div class="temp-container">
+                    <p id="temperature">81</p>
+                    <div class="temp-right">
+                        <!-- <p class="degrees">°</p> -->
+                        <div class="degrees"></div>
+                        <p>93°</p>
+                        <p class="connecting-line">|</p>
+                        <p>77°</p>
+                    </div>
+                </div>
+                
+                <p class="stretch" id="weather-description">
+                    <span>R</span>
+                    <span>A</span>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>Y</span>
+                </p>
+                <p class="stretch" id="wind">
+                    <span>7</span>
+                    <span>MPH</span>
+                    <span>NNW</span>
+                </p>
+            </div>
+            <p class="stretch" id="city-name">
+                <span>P</span>
+                <span>H</span>
+                <span>I</span>
+                <span>L</span>
+                <span>A</span>
+                <span>D</span>
+                <span>E</span>
+                <span>L</span>
+                <span>P</span>
+                <span>H</span>
+                <span>I</span>
+                <span>A</span>
+            </p>
+        </div>
+        <div class="hourly-container">
+            <div class="hourly">
+                <p class="title">HOURLY</p>
+                <div class="hours-container">
+                    <div class="hour">
+                        <p>NOW</p>
+                        <img src="rain.png" height="36px" width="36px"/>
+                        <p>81°</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>8AM</p>
+                        <img src="rain.png" height="36px" width="36px"/>
+                        <p>84°</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>9AM</p>
+                        <img src="rain.png" height="36px" width="36px"/>
+                        <p>86°</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>10AM</p>
+                        <img src="rain.png" height="36px" width="36px"/>
+                        <p>89°</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>11AM</p>
+                        <img src="cloud.png" height="36px" width="36px"/>
+                        <p>90°</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>12PM</p>
+                        <img src="sunny.png" height="36px" width="36px"/>
+                        <p>92°</p>
+                    </div>
+                    <img src="rain.png" height="42px" width="42px" class="rain one"/>
+                    <img src="rain.png" height="42px" width="42px" class="rain two"/>
+                    <img src="rain.png" height="42px" width="42px" class="rain three"/>
+                    <img src="cloud.png" height="36px" width="36px" class="cloud one"/>
+                    <img src="cloud.png" height="36px" width="36px" class="cloud two"/>
+                    <img src="cloud.png" height="36px" width="36px" class="cloud three"/>
+                    <img src="cloud.png" height="36px" width="36px" class="cloud four"/>
+                    <div class="chart-container">
+                        <svg class="line-chart" viewBox="0 0 300 90">
+                            <defs>
+                                <!-- <pattern id="dashed-fill" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <rect width="5" height="20" fill="red" />
+                                    <rect width="5" height="20" x="10" fill="red" />
+                                </pattern> -->
+                                <!-- <pattern id="dashed-fill" height="10" width="10" patternUnits="userSpaceOnUse">
+                                    <line x1="0" y1="4" x2="5" y2="4" stroke-width="2" stroke="black" />
+                                    <line x1="0" y1="0" x2="5" y2="5" stroke-width="2" stroke="black" />
+                                    <line x1="4" y1="0" x2="4" y2="5" stroke-width="2" stroke="black" /> 
+                                    <line x1="0" y1="2.5" x2="5" y2="7.5" stroke-width="2" stroke="black" />
+                                </pattern> -->
+                                <pattern id="dashed-fill" height="10" width="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+                                    <line x1="0" y1="2" x2="5" y2="2" stroke-width="1" stroke="#72abef"/>
+                                    <line x1="2" y1="4" x2="7" y2="4" stroke-width="1" stroke="#72abef"/>
+                                    <line x1="5" y1="6" x2="9" y2="6" stroke-width="1" stroke="#72abef"/>
+                                    <line x1="3" y1="8" x2="7" y2="8" stroke-width="1" stroke="#72abef"/>
+                                </pattern>
+                            </defs>
+                            <!-- Replace this path data with your weather data -->
+                            <path class="line" d="M 0 37.5 C 33 38 118 43 157 60 C 186 72 207 79 296 81"></path>
+                            <polygon class="fill-area" points="0,80 0,37.5 33,39 118,50 157,60 186,72 207,76 296,81 300,80"></polygon>
+                            <!-- Add circles for your data points here -->
+                            <!-- <g class="dots">
+                                <circle cx="50" cy="250" r="5"></circle>
+                                <circle cx="150" cy="100" r="5"></circle>
+                                <!-- Add more circles for additional data points -->
+                            </g> -->
+                        </svg>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="pp">
+                <p class="title">PERCIPITATION PROBABILITY</p>
+                <div class="pp-container">
+                    <div class="hour">
+                        <p>100%</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>100%</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>90%</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>70%</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>20%</p>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="hour">
+                        <p>0%</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="map">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon style="fill: blue; stroke: blue; stroke-width: 0.3; font-size: 16px;" speechify-initial-font-family=""Times New Roman"" speechify-initial-font-size="16px" points="17.8 53.4 32.2 48.6 34.2 55.3 30.2 61.3 32 75 35.7 78.7 38.7 75.4 42.4 59.8 47.1 47.9 48 45.8 54.6 43.5 63.4 44.9 69.2 49 73.2 59.1 70.9 68 68.7 73.3 69.4 77.1 74.4 78.6 78.4 72.4 84.6 62.8 89.2 57.8 91.7 56.8 93.1 57.3 95.7 74.1 93.4 82.9 89.8 88.1 80.7 89.7 69.4 89.8 61 90.4 48.8 93.4 38.4 89.6 36.9 85.2 33.4 85.3 25.9 89.4 20.4 90 24.9 75.9 23.4 70.5 18.1 60.5"></polygon>
+            </svg>
+            <p class="curr-location">YOU ARE HERE</p>
+            <div class="location">
+                <div class="circle" style="--radius:7.5px;--color:blue;--bthick:1px">
+                    <div class="circle" style="--radius:4px;--color:blue;--bthick:0.5px"></div>
+                </div>
+            </div>
+            <img src="droplets.png" height="24px" class="button"/>
+        </div>
+        <div class="weekly">
+            <p class="title">WEEKLY</p>
+            <div class="day">
+                <p class="day-label">TODAY</p>
+                <!-- <div class="pie-chart">
+                    <div class="pie-chart-fill"></div>
+                </div> -->
+                <div class="icons">
+                    <img src="rain.png" height="24px"/>
+                    <div class="pie" style="--percent:75;--color:blue;"></div>
+                </div>
+                <p>77° — 93°</p>
+            </div>
+            <div class="day">
+                <p class="day-label">WEDNESDAY</p>
+                <div class="icons">
+                    <img src="cloud.png" height="24px"/>
+                    <div class="pie" style="--percent:25;--color:blue;"></div>
+                </div>
+                <p>75° — 96°</p>
+            </div>
+            <div class="day">
+                <p class="day-label">THURSDAY</p>
+                <div class="icons">
+                    <img src="sunny.png" height="24px"/>
+                    <div class="pie" style="--percent:0;--color:blue;"></div>
+                </div>
+                <p>76° — 95°</p>
+            </div>
+            <div class="day">
+                <p class="day-label">FRIDAY</p>
+                <div class="icons">
+                    <img src="partly-cloudy.png" height="24px"/>
+                    <div class="pie" style="--percent:15;--color:blue;"></div>
+                </div>
+                <p>74° — 91°</p>
+            </div>
+        </div>
+        <!-- <div class="search-container">
+            <input type="text" id="search-input" placeholder="Enter City">
+            <button id="search-button">Search</button>
+        </div> -->
+        
+    </div>
+</body>
+</html>

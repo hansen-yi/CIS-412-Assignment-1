@@ -1,0 +1,434 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e3f3ff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 100;
+    -webkit-font-smoothing:antialiased;
+}
+
+h3 {
+    font-weight: 100;
+    text-align: left;
+}
+
+/* .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+.rain.main {
+    top: -25px;
+    left: -30px;
+}
+
+/* Style the elliptical container */
+.button-container {
+    width: 40px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    background-color: #ccc; /* Background color of the ellipse */
+    /* border-radius: 25%; Create an ellipse shape */
+    /* border-radius: 100px 0 100px 0; */
+    border-radius: 50%;
+    padding-left: 20px;
+    position: absolute; /* Enable positioning of the circle */
+    top: 15px;
+    left: 15px;
+  }
+  
+  /* Style the circular element */
+  .circle-button {
+    width: 20px; /* Diameter of the circle */
+    height: 20px; /* Diameter of the circle */
+    background-color: #2196F3; /* Background color of the circle */
+    border-radius: 50%; /* Create a circle */
+    position: absolute; /* Position the circle within the ellipse */
+    top: 50%; /* Vertically center the circle */
+    /* left: 50%; Horizontally center the circle */
+    transform: translate(-50%, -50%); /* Center the circle within the ellipse */
+  }
+
+  .c-button {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    background-color: #58a0ed;
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+
+  .settings {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temp-container {
+    display: flex;
+}
+
+.temp-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.degrees {
+    /* font-size: 100px; */
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 3px solid black;
+    /* padding-bottom: 10px; */
+    margin-bottom: 10px;
+}
+
+.connecting-line {
+    text-align: left;
+    padding-left: 7px;
+}
+
+.condensed-info {
+    width: 120px;
+}
+
+.stretch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-container {
+    margin-top: 15px;
+    padding: 0px;
+    /* border: 1px solid #ccc; */
+    border: 1px solid #8a90ff;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+}
+
+.hourly {
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #f8f8f8;
+}
+
+.pp {
+    padding: 10px;
+}
+
+.pp .title {
+    font-size: 12px;
+}
+
+.hours-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.rain, .cloud {
+    position: absolute;
+    z-index: 1;
+}
+
+.rain.one {
+    top:16px;
+    left:28px;
+}
+
+.rain.two {
+    top:16px;
+    left:76px;
+}
+
+.rain.three {
+    top:16px;
+    left:125px;
+}
+
+.cloud.one {
+    top: 12px;
+    left: 20px;
+}
+
+.cloud.two {
+    top: 12px;
+    left: 72px;
+}
+
+.cloud.three {
+    top: 12px;
+    left: 100px;
+}
+
+.cloud.four {
+    top: 14px;
+    left: 147px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* height: 100vh; */
+}
+
+.line-chart {
+    width: 100%;
+    height: auto;
+}
+
+.line {
+    fill: none;
+    stroke: #72abef; /* Line color */
+    stroke-width: 1; /* Line thickness */
+    stroke-dasharray: 5 2;
+}
+
+.dots circle {
+    fill: #007BFF; /* Dot color */
+}
+
+.fill-area {
+    /* fill: lightblue; Fill color */
+    fill: url(#dashed-fill); 
+    fill-opacity: 0.5;
+}
+
+.pp-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.hour {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45px;
+    align-items: center;
+    z-index: 1;
+}
+
+.vertical-line {
+    width: 0.5px;
+    background-color: black;
+    opacity: 0.25;
+}
+
+.hours-container .hour {
+    height: 75px;
+}
+
+.map, .weekly {
+    margin-top: 15px;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    border-radius: 15px;
+    background-color: #f8f8f8;
+    /* background-color: #c8cbff; */
+    border: 1px solid #8a90ff;
+}
+
+#temperature {
+    font-size: 100px;
+    /* margin-bottom: 10px; */
+    font-weight: 100;
+}
+
+#weather-description {
+    font-size: 20px;
+}
+
+#wind {
+    font-size: 20px;
+}
+
+#city-name {
+    font-size: 32px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.title {
+    text-align: left;
+    font-weight: 600;
+}
+
+.map {
+    height: 100px;
+    background-image: url("map.png");
+    background-size: cover;
+    background-position-y: 51.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    /* resize: ; */
+}
+
+.map svg {
+    width: 200%;
+    opacity: 25%;
+    position: absolute;
+    transform: translate(0%, -25%);
+    filter: blur(5px);
+}
+
+/* .location { */
+    /* position: relative; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+  /* } */
+
+.circle {
+    width: var(--radius);
+    height: var(--radius);
+    border: var(--bthick) solid var(--color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.curr-location {
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.button {
+    position: absolute;
+    top: 5%;
+    right: 2.5%;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+    background-color: #c8cbff;
+}
+
+.weekly {
+    display: flex;
+    flex-direction: column;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.day-label {
+    width: 125px;
+    text-align: left;
+}
+
+.day .icons {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pie {
+    /* --w: 15px; */
+    /* width: var(--w); */
+    height: 15px;
+    aspect-ratio: 1;
+    position: relative;
+    /* display: inline-grid; */
+    /* place-content: center; */
+}
+
+.pie:before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 0.5px solid black;
+    inset: 0;
+    background: conic-gradient(var(--color) calc(var(--percent)*1%),#0000 0);
+}
+
+/* .pie-chart {
+    width: 100px;
+    height: 100px;
+    background-color: #eee; 
+    border-radius: 50%; 
+    position: relative;
+  } */
+  
+  /* .pie-chart-fill {
+    width: 50%; 
+    height: 100%;
+    background-color: #007BFF; 
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+  } */
+  
